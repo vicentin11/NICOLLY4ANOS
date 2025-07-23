@@ -1,0 +1,122 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo com imagem de fundo personalizada */
+body {
+  background-image: url('img/1920\ x\ 1080.png'); /* ← Sua imagem de fundo aqui */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Quicksand', 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* leve transparência */
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+/* Texto superior */
+.texto-topo h1 {
+  font-size: 2rem;
+  color: #ff00bf;
+  margin-bottom: 10px;
+}
+
+.texto-topo p {
+  color: #ff006a;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+/* Envelope estilizado */
+.envelope-wrapper {
+  position: relative;
+  width: 320px;
+  height: 220px;
+  margin: 30px auto;
+  perspective: 1000px;
+}
+
+.envelope {
+  width: 100%;
+  height: 100%;
+  background-image: url('img/arkCRAFT_Lot_de_25_enveloppes_C6_de_qualité_supérieure_100_g_m__114_x_162_mm__rose_layette_-removebg-preview.png'); /* ← Sua imagem de envelope */
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.6s ease;
+}
+
+.envelope-wrapper:hover .envelope {
+  transform: rotateX(3deg) rotateY(3deg) scale(1.02);
+}
+
+/* Selo sem borda */
+.selo {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url('img/selo-removebg-preview.png'); /* Minnie rosa */
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.selo:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Texto inferior */
+.texto-rodape {
+  margin-top: 20px;
+}
+
+.texto-rodape p {
+  color: #ff006a;
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .envelope-wrapper {
+    width: 90%;
+    height: 200px;
+  }
+
+  .selo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .texto-topo h1 {
+    font-size: 1.6rem;
+  }
+
+  .texto-rodape p {
+    font-size: 0.9rem;
+  }
+}
